@@ -2,17 +2,20 @@
 
 This project implements an image sharpening system using **Knowledge Distillation**, where a powerful pretrained **Restormer** model acts as a **teacher** and a lightweight **Residual UNet** model is trained as a **student** to sharpen blurred images efficiently. The aim is to produce sharper images with fewer computational resources while maintaining high quality.
 
-Objective
+Objective--
+
 Develop a model to enhance image sharpness during video conferencing, addressing issues
 like reduced clarity due to low bandwidth or poor internet connections.
 
 Approach
+
 • Utilize a Teacher-Student model technique for knowledge distillation:
 • Teacher Model: Select a high-performing pre-trained image sharpness model.
 • Student Model: Design and develop an ultra-lightweight AI/ML model that mimics the
 teacher model's performance.
 
-Requirements
+Requirements--
+
 The final model should operate at 30-60 frames per second (fps) or higher, maintaining high
 accuracy. During training, use high-resolution images cropped to lower resolutions to reduce
 computational complexity. However, the model must be capable of processing 1920x1080 resolution
