@@ -96,7 +96,7 @@ Blur2Sharp/
 
 | Metric    | Value          |
 |--------   |----------------|
-| **SSIM**  |  95.72%     |
+| **SSIM**  |  93.72%     |
 
 
 - Input Image Size: 256×256 (resized for speed)
