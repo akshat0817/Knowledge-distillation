@@ -99,8 +99,6 @@ Blur2Sharp/
 | **SSIM**  | ✅ 95.72%     |
 
 
-- Training Time: ~10 minutes on Kaggle T4 GPU
-- Epochs: 5
 - Input Image Size: 256×256 (resized for speed)
 
 
