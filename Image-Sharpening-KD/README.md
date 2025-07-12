@@ -1,4 +1,4 @@
- Image Sharpening using Knowledge Distillation
+## Image Sharpening using Knowledge Distillation
 
 This project implements an image sharpening system using **Knowledge Distillation**, where a powerful pretrained **Restormer** model acts as a **teacher** and a lightweight **Residual UNet** model is trained as a **student** to sharpen blurred images efficiently. The aim is to produce sharper images with fewer computational resources while maintaining high quality.
 
