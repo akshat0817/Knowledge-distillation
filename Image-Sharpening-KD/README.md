@@ -1,4 +1,4 @@
-# 🖼️ Image Sharpening using Knowledge Distillation
+ Image Sharpening using Knowledge Distillation
 
 This project implements an image sharpening system using **Knowledge Distillation**, where a powerful pretrained **Restormer** model acts as a **teacher** and a lightweight **Residual UNet** model is trained as a **student** to sharpen blurred images efficiently. The aim is to produce sharper images with fewer computational resources while maintaining high quality.
 
@@ -26,11 +26,11 @@ images at the target fps.
 
 
 
-## 🧠 Knowledge Distillation Framework
+ Knowledge Distillation Framework
 
 Knowledge Distillation is used to transfer knowledge from a large model (teacher) to a smaller model (student).
 
-### 📌 Loss Function Used:
+###  Loss Function Used:
 
 We combine two types of loss:
 
@@ -47,7 +47,7 @@ Where:
 
 
 
-## 📁 Dataset
+##  Dataset
 
 - Source: Custom dataset uploaded on Kaggle
 - Total: **1800 image pairs**
@@ -64,7 +64,7 @@ Blur2Sharp/
 
 
 
-## 🧰 Technologies Used
+##  Technologies Used
 
 | Tool             | Purpose                         |
 |---------------   |-------------------------------- |
@@ -77,32 +77,32 @@ Blur2Sharp/
 
 
 
-## 🧠 Models
+##  Models
 
-### ✅ Teacher Model — Restormer
+###  Teacher Model — Restormer
 - Source: [https://github.com/swz30/Restormer](https://github.com/swz30/Restormer)
 - Task: Motion Deblurring
 - Checkpoint: `motion_deblurring.pth`
 - Used for inference only (teacher guidance)
 
-### ✅ Student Model — Residual UNet
+###  Student Model — Residual UNet
 - Architecture: UNet-like with residual blocks
 - Trained using L1 + KD Loss
 - Efficient, lightweight & fast to train
 
 
 
-## 📊 Results
+##  Results
 
 | Metric    | Value          |
 |--------   |----------------|
-| **SSIM**  | ✅ 95.72%     |
+| **SSIM**  |  95.72%     |
 
 
 - Input Image Size: 256×256 (resized for speed)
 
 
-## 🗂️ Project Structure
+## Project Structure
 Image-Sharpening-KD/
 ├── notebook/
 │ └── image-sharpening-kd.ipynb
