@@ -2,17 +2,22 @@
 
 This project implements an image sharpening system using **Knowledge Distillation**, where a powerful pretrained **Restormer** model acts as a **teacher** and a lightweight **Residual UNet** model is trained as a **student** to sharpen blurred images efficiently. The aim is to produce sharper images with fewer computational resources while maintaining high quality.
 
+Objective
+Develop a model to enhance image sharpness during video conferencing, addressing issues
+like reduced clarity due to low bandwidth or poor internet connections.
 
+Approach
+• Utilize a Teacher-Student model technique for knowledge distillation:
+• Teacher Model: Select a high-performing pre-trained image sharpness model.
+• Student Model: Design and develop an ultra-lightweight AI/ML model that mimics the
+teacher model's performance.
 
-## 🔍 Problem Statement
+Requirements
+The final model should operate at 30-60 frames per second (fps) or higher, maintaining high
+accuracy. During training, use high-resolution images cropped to lower resolutions to reduce
+computational complexity. However, the model must be capable of processing 1920x1080 resolution
+images at the target fps.
 
-Blurry images (due to camera shake, defocus, or motion) often lose essential high-frequency details like edges, textures, and fine patterns. Recovering these details is critical for medical imaging, surveillance, and consumer photography.
-
-The goal of this project is:
-
-- To train a **lightweight student model** (Residual UNet) to sharpen blurry images.
-- To use **Knowledge Distillation (KD)** to guide the student using a **pretrained teacher model (Restormer)**.
-- To evaluate the model’s performance using **SSIM (Structural Similarity Index)** and **PSNR (Peak Signal-to-Noise Ratio)**.
 
 
 
@@ -86,8 +91,8 @@ Blur2Sharp/
 
 | Metric    | Value          |
 |--------   |----------------|
-| **SSIM**  | ✅ 98.72%     |
-| **PSNR**  | ✅ 37.91 dB   |
+| **SSIM**  | ✅ 95.72%     |
+
 
 - Training Time: ~10 minutes on Kaggle T4 GPU
 - Epochs: 5
@@ -105,29 +110,9 @@ Image-Sharpening-KD/
 │ └── restormer_loader.py
 ├── utils/
 │ └── metrics.py
-├── requirements.txt
+├── requirements
 └── README.md
 
-## 🛠️ How to Run
-
-1. Clone the repo:
-
-git clone https://github.com/Kundayadav18/Image-Sharpening-KD.git
-cd Image-Sharpening-KD
-
-pip install -r requirements.txt
-
-2. Install dependencies:
-pip install -r requirements.txt
-
-3.Run the notebook
-jupyter notebook notebook/image-sharpening-kd.ipynb
-
-4.Load trained weights (optional):
-from models.residual_unet import ResidualUNet
-student = ResidualUNet().to(device)
-student.load_state_dict(torch.load("checkpoints/residual_unet_student.pth"))
-student.eval()
 
 
 
