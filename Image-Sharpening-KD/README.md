@@ -10,7 +10,9 @@ like reduced clarity due to low bandwidth or poor internet connections.
 Approach
 
 • Utilize a Teacher-Student model technique for knowledge distillation:
+
 • Teacher Model: Select a high-performing pre-trained image sharpness model.
+
 • Student Model: Design and develop an ultra-lightweight AI/ML model that mimics the
 teacher model's performance.
 
